@@ -3,13 +3,14 @@
  Stored Procedure: Load Bronze Layer (Source -> Landing Zone)
 ==========================================================================
 This stored procedure loads data into the 'bronze' schema (landing zone)
-from external CSV files. It performs the following actions:
+from external CSV files. It performs the following load actions to ensure 
+data-idempotency(full refresh):
+
 - Truncates the tables before loading data.
 - Uses 'BULK INSERT' command to load data from CSV files to the bronze tables.
 
-Usage Example:
+Usage Example (This command should be implemented in a separate query in SSMS):
     EXEC bronze.load_bronze; 
-This command should be implemented in a separate query in SSMS.
 ==========================================================================
 */
 
