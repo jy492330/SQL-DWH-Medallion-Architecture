@@ -46,7 +46,7 @@ Your Gold layer is designed to support **three different data modeling outputs**
 
 ##### Option A — Star schema (classic)
 **Data Flow Diagram (Option A: Star Schema)**
-![Data Flow Diagram - Star Schema]docs/diagrams/Data Flow Diagram (Star Schema).png
+![Data Flow Diagram - Star Schema](docs/diagrams/Data Flow Diagram (Star Schema).png)
 
 **Gold objects**
 - `dim_customers`
