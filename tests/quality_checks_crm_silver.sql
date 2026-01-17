@@ -4,7 +4,7 @@ Quality Checks
 =================================================================================================
 Purpose:
 These scripts perform various quality checks for data consistency, accuracy, and standardization
-across CRM 'bronze' tables before and after loading data into the 'silver' schema. 
+across the CRM 'bronze' tables before and after loading data into the 'silver' schema. 
 They include checks for:
 - Null or duplicate primary keys.
 - Unwanted spaces in text fiedls.
@@ -110,7 +110,6 @@ WHERE flag = 1;   -- WHERE flag = 1 AND cst_id = 29433;
 
 
 -- Check Data Standardization & Consistency (Get Column Cardinality)
-
 -- 1st Version
 SELECT
     cst_id,
@@ -168,6 +167,7 @@ WHERE flag = 1 AND cst_id IS NOT NULL;
 Load Data Into Silver Table (silver.crm_cust_info)
 ===================================================
 */
+
 INSERT INTO silver.crm_cust_info (
     cst_id,
     cst_key,
@@ -208,6 +208,7 @@ WHERE flag = 1;
 Re-run Quality Check Queries For the Loaded Data In Silver (silver.crm_cust_info)
 ===========================================================================================
 */
+
 -- Check for duplicates or NUlls in primary id
 -- Expectation: No Results
 SELECT cst_id, COUNT(*)
@@ -368,6 +369,7 @@ FROM bronze.crm_prd_info
 Load Data Into Silver Table (silver.crm_prd_info)
 ========================================================
 */
+	
 INSERT INTO silver.crm_prd_info (
     prd_id,
     cat_id,
