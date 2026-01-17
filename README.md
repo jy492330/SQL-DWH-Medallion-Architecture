@@ -45,7 +45,7 @@ In this project, the **Gold layer is implemented as SQL views** (no physical loa
 
 Your Gold layer is designed to support **three different data modeling outputs**: 
 
-##### Option A — Star schema 
+#### Option A — Star schema 
 **Data Flow Diagram (Option A: Star Schema)**
 ![Data Flow Diagram - Star Schema](https://github.com/jy492330/SQL-DWH-Project/blob/main/docs/diagrams/Data%20Flow%20Diagram%20(Star%20Schema).png)
 
@@ -56,7 +56,7 @@ Your Gold layer is designed to support **three different data modeling outputs**
 
 This pattern keeps dimensions separate and connects them to a central fact table (standard star schema build). 
 
-##### Option B — Flat / Wide table (denormalized)
+#### Option B — Flat / Wide table (denormalized)
 **Data Flow Diagram (Option B: Flat Table)**
 
 This option produces **one wide dataset** where customer + product attributes are already joined onto each sales row.
@@ -110,7 +110,7 @@ From the data flow diagram, the pipeline follows this structure:
 
 ---
 
-## Analytics goals (what you can answer with this warehouse)
+## Analytics goals 
 
 The Gold layer is designed to support SQL-based analytics and reporting, including:
 - Customer behavior insights
@@ -121,7 +121,7 @@ The Gold layer is designed to support SQL-based analytics and reporting, includi
 
 ## Repository structure
 
-Typical layout (adjust to match your repo if needed):
+Typical layout:
 - `datasets/` – source CSV files (ERP + CRM extracts)
 - `scripts/` – DDL + stored procedures for Bronze/Silver/Gold
 - `docs/` – diagrams and documentation
