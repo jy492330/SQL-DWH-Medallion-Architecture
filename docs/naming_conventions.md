@@ -1,10 +1,10 @@
-## **General Principles**
+# **General Principles**
 
 - **Naming Conventions**: Use snake_case, with lowercase letters and underscores (**`_`**) to separate words.
 - **Language**: Use English for all names.
 - **Avoid Reserved Words**: Do not use SQL reserved words as object names.
 
-## **Table Naming Conventions**
+# **Table Naming Conventions**
 
 ### **Bronze Rules**
 
@@ -41,7 +41,7 @@
 | `fact_` | Fact table | `fact_sales` |
 | `agg_` | Aggregated table | `agg_customers`, `agg_sales_monthly` |
 
-## **Column Naming Conventions**
+# **Column Naming Conventions**
 
 ### **Surrogate Keys**
 
@@ -59,7 +59,7 @@
     - `<column_name>`: Descriptive name indicating the column's purpose.
     - Example: `dwh_load_date` → **System-generated column** used to store the date when the record was loaded.
 
-## **Stored Procedure**
+# **Stored Procedure**
 
 - All stored procedures used for **loading data** must follow the naming pattern:
 - **`load_<layer>`**.
