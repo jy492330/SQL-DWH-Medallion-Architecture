@@ -47,7 +47,7 @@ Your Gold layer is designed to support **three different data modeling outputs**
 
 #### Option A — Star schema 
 **Data Flow Diagram (Option A: Star Schema)**
-![Data Flow Diagram - Star Schema](https://github.com/jy492330/SQL-DWH-Project/blob/main/docs/diagrams/Data%20Flow%20Diagram%20(Star%20Schema).png)
+![Data Flow Diagram - Star + Flat Schema]()
 
 **Gold objects**
 - `dim_customers`
@@ -59,7 +59,7 @@ This pattern keeps dimensions separate and connects them to a central fact table
 #### Option B — Flat / Wide Schema (denormalized)
 **Data Flow Diagram (Option B: Flat Schema (OBT)**
 
-This option produces **one wide dataset** where customer + product attributes are already joined onto each sales row. \
+This option produces **one wide dataset** where customer + product attributes are already joined onto each sales row.  
  
 **Flat Schema = “Star schema flattened” (fact + dims joined in one for BI convenience)**
 
