@@ -66,9 +66,9 @@ WHERE p1.prd_end_dt IS NULL
 -- ======================================================================================
 CREATE OR ALTER VIEW gold.fact_sales AS
 SELECT 
-sd.sls_ord_num AS order_number,
 pr.product_key,   -- Surrogate Key from Gold Dim Products View
 cu.customer_key,  -- Surrogate Key from Gold Dim Customers View
+sd.sls_ord_num AS order_number,
 sd.sls_order_dt AS order_date,
 sd.sls_ship_dt AS shipping_date,
 sd.sls_due_dt AS due_date,
